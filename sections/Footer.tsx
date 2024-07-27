@@ -44,65 +44,64 @@ export default function Footer({
   logo = {
     src:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
-    alt: "Logo",
+    alt: "Primordial Groove Logo",
   },
   links = [
     {
-      title: "Column One",
+      title: "Explore",
       items: [
-        { label: "Link One", href: "/" },
-        { label: "Link Two", href: "/" },
-        { label: "Link Three", href: "/" },
-        { label: "Link Four", href: "/" },
-        { label: "Link Five", href: "/" },
+        { label: "Home", href: "/" },
+        { label: "About Us", href: "/about" },
+        { label: "Events", href: "/events" },
+        { label: "Contact", href: "/contact" },
       ],
     },
     {
-      title: "Column Two",
+      title: "Community",
       items: [
-        { label: "Link Six", href: "/" },
-        { label: "Link Seven", href: "/" },
-        { label: "Link Eight", href: "/" },
-        { label: "Link Nine", href: "/" },
-        { label: "Link Ten", href: "/" },
+        { label: "Artists", href: "/artists" },
+        { label: "Collaborate", href: "/collaborate" },
+        { label: "Workshops", href: "/workshops" },
+        { label: "Join Us", href: "/join" },
       ],
     },
     {
-      title: "Column Three",
+      title: "Support",
       items: [
-        { label: "Link Eleven", href: "/" },
-        { label: "Link Twelve", href: "/" },
-        { label: "Link FourThirteenteen", href: "/" },
-        { label: "Link Fourteen", href: "/" },
-        { label: "Link Fifteen", href: "/" },
+        { label: "Help Center", href: "/help" },
+        { label: "Privacy Policy", href: "/privacy" },
+        { label: "Terms of Service", href: "/terms" },
       ],
     },
   ],
   subscribe = {
-    title: "Subcribe",
+    title: "Stay Connected",
     description:
-      "Join our newsletter to stay up to date on features and releases.",
+      "Join our newsletter to stay updated on the latest events, workshops, and artist collaborations.",
     instructions:
-      "By subscribing you agree to with our <a href='/' target='_blank' class='link'>Privacy Policy</a> and provide consent to receive updates from our company.",
+      "By subscribing, you agree to our <a href='/privacy' target='_blank' class='link'>Privacy Policy</a> and consent to receive updates from Primordial Groove.",
   },
   madeWith = {
-    label: "Made with",
+    label: "Crafted with Passion",
     src:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/cc202be0-af57-4b32-b9c9-d1d7dc97bf85",
-    href: "https://deco.cx",
+    href: "https://primordialgroove.com",
   },
-  copyright = "© 2024 deco.cx. All rights reserved.",
+  copyright = "© 2024 Primordial Groove. All rights reserved.",
   bottomLinks = [
-    { label: "Privacy Policy", href: "/" },
-    { label: "Terms of Service", href: "/" },
-    { label: "Cookies Settings", href: "/" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
+    { label: "Cookies Settings", href: "/cookies" },
   ],
   social = [
-    { network: "Facebook", href: "" },
-    { network: "Instagram", href: "" },
-    { network: "X - Twitter", href: "" },
-    { network: "Linkedin", href: "" },
-    { network: "Youtube", href: "" },
+    { network: "Facebook", href: "https://facebook.com/primordialgroove" },
+    { network: "Instagram", href: "https://instagram.com/primordialgroove" },
+    { network: "X - Twitter", href: "https://twitter.com/primordialgroove" },
+    {
+      network: "Linkedin",
+      href: "https://linkedin.com/company/primordialgroove",
+    },
+    { network: "Youtube", href: "https://youtube.com/primordialgroove" },
   ],
 }: Props) {
   return (

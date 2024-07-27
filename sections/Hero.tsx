@@ -11,11 +11,11 @@ export interface CTA {
 export interface Props {
   /**
    * @format rich-text
-   * @default Click here to tweak this text however you want.
+   * @default Unleash Your Creative Potential
    */
   title?: string;
   /**
-   * @default This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.
+   * @default Join Primordial Groove and immerse yourself in a community that celebrates raw, unfiltered creativity. Collaborate, experiment, and grow with us.
    */
   description?: string;
   image?: ImageWidget;
@@ -29,14 +29,14 @@ const PLACEMENT = {
 };
 
 export default function HeroFlats({
-  title = "Click here to tweak this text however you want.",
+  title = "Unleash Your Creative Potential",
   description =
-    "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
+    "Join Primordial Groove and immerse yourself in a community that celebrates raw, unfiltered creativity. Collaborate, experiment, and grow with us.",
   image,
   placement = "left",
   cta = [
-    { id: "change-me-1", href: "/", text: "Change me", outline: false },
-    { id: "change-me-2", href: "/", text: "Change me", outline: true },
+    { id: "join-us", href: "/join", text: "Join Us", outline: false },
+    { id: "learn-more", href: "/about", text: "Learn More", outline: true },
   ],
 }: Props) {
   return (

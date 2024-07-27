@@ -1,8 +1,8 @@
-
-
 import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Video from "apps/website/components/Video.tsx";
+import { useEffect, useRef } from "preact/hooks";
+import "./HeroSection.css";
 
 export interface Props {
   /**
@@ -43,15 +43,15 @@ export default function HeroSection({
   secondaryColor = "#40E0D0",
   textColor = "#FFFFFF",
   backgroundImage,
-  backgroundVideo
+  backgroundVideo,
 }: Props) {
   return (
     <div
       className="hero min-h-screen"
       style={{
         backgroundImage: backgroundImage
-          ? `url(${backgroundImage.src})`
-          : "url(https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1818/6fe9404a-f69c-472a-b521-78f6c1f87326)"
+          ? `url(${backgroundImage.url})`
+          : "url(https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1818/6fe9404a-f69c-472a-b521-78f6c1f87326)",
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
@@ -72,57 +72,22 @@ export default function HeroSection({
       </div>
       {backgroundVideo && (
         <Video
-          src={backgroundVideo.src}
+          src={backgroundVideo.url}
           className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
         />
       )}
       <div className="parallax-bg">
         <Image
-          src={backgroundImage?.src || "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1818/6fe9404a-f69c-472a-b521-78f6c1f87326"}
+          src={backgroundImage?.url ||
+            "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1818/6fe9404a-f69c-472a-b521-78f6c1f87326"}
           className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          alt="Background"
         />
       </div>
     </div>
   );
 }
-
-@keyframes animate-charcter { {
-    opacity: 0;
-    transform: translateY(-50px);
-  } {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</answer>
-
-<answer>
-
-import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
-import Image from "apps/website/components/Image.tsx";
-import Video from "apps/website/components/Video.tsx";
-import { useEffect, useRef } from "preact/hooks";
-import * as THREE from "three";
-
-export interface Props {
-  /**
-   * @format rich-text
-   */
-  headline?: string;
-  /**
-   * @format textarea
-   */
-  subheadline?: string;
-  /**
-   * @format rich-text
-   */
-  ctaText?: string;
-  ctaLink?: string;
-  /**
-   * @format color-input
-   */
-  primaryColor?: string;
-  /**
-   * @format color-input
-   */
-  secondaryColor?: string;

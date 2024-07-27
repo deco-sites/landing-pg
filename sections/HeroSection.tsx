@@ -1,4 +1,6 @@
-import type { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
+
+
+import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Video from "apps/website/components/Video.tsx";
 
@@ -55,7 +57,9 @@ export default function HeroSection({
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center" style={{ color: textColor }}>
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">{headline}</h1>
+          <h1 className="mb-5 text-5xl font-bold animate-charcter">
+            {headline}
+          </h1>
           <p className="mb-5">{subheadline}</p>
           <a
             href={ctaLink}
@@ -72,6 +76,53 @@ export default function HeroSection({
           className="absolute inset-0 w-full h-full object-cover"
         />
       )}
+      <div className="parallax-bg">
+        <Image
+          src={backgroundImage?.src || "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1818/6fe9404a-f69c-472a-b521-78f6c1f87326"}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
     </div>
   );
 }
+
+@keyframes animate-charcter { {
+    opacity: 0;
+    transform: translateY(-50px);
+  } {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</answer>
+
+<answer>
+
+import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
+import Image from "apps/website/components/Image.tsx";
+import Video from "apps/website/components/Video.tsx";
+import { useEffect, useRef } from "preact/hooks";
+import * as THREE from "three";
+
+export interface Props {
+  /**
+   * @format rich-text
+   */
+  headline?: string;
+  /**
+   * @format textarea
+   */
+  subheadline?: string;
+  /**
+   * @format rich-text
+   */
+  ctaText?: string;
+  ctaLink?: string;
+  /**
+   * @format color-input
+   */
+  primaryColor?: string;
+  /**
+   * @format color-input
+   */
+  secondaryColor?: string;

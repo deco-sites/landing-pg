@@ -6,10 +6,12 @@
       "__resolveType": "Header"
     },
     {
-      "__resolveType": "site/sections/Hero.tsx",
-      "title": "<pre><code>Where Art Meets Community</code></pre>",
-      "cta": [],
-      "description": "Primordial Groove exists to redefine musical boundaries, foster unconventional artistry, and build a community around raw, unfiltered sound."
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HeroSection.tsx",
+        "subheadline": "Where Art Meets CommunitPrimordial Groove exists to redefine musical boundaries, foster unconventional artistry, and build a community around raw, unfiltered sound.",
+        "headline": "<p>Where Art Meets Commubnity </p>"
+      }
     },
     {
       "__resolveType": "site/sections/Logos.tsx"

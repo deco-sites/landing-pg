@@ -7,9 +7,9 @@
     },
     {
       "__resolveType": "site/sections/Hero.tsx",
-      "title": "<p>Where Art Meets Community</p>",
+      "title": "<pre><code>Where Art Meets Community</code></pre>",
       "cta": [],
-      "description": "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away."
+      "description": "Primordial Groove exists to redefine musical boundaries, foster unconventional artistry, and build a community around raw, unfiltered sound."
     },
     {
       "__resolveType": "site/sections/Logos.tsx"
